@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELF PORTFOLIO</title>
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<style>
+  
+*{
+        padding:0;
+        margin:0;
+        scroll-behavior: smooth;
+        box-sizing: border-box;
+  }
+  body {
+      background: linear-gradient(to right, hsl(192, 95%, 7%), #00b7ff);
+      overflow-x: hidden;
+    }
+  header {
+       /* background: rgba(255, 255, 255, 0.9);*/
+        position: fixed;
+         width: 100%;
+         backdrop-filter: blur(10px);
+         z-index:2;
+        }
+  #logo{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(0, 191, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+    font-weight: bolder;
+  }
+#navbar{
+   background-color: #012631;
+    height: 80px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: flex;
+    z-index: 10;
+    align-items: center;
+    justify-content: space-between;
+
+}
+#tags{
+  text-decoration: none;
+  color: white;
+  margin-right: 100px;
+  font-size: 20px;
+  font-weight: bold;
+}
+#navbar a{
+  padding: 5px;
+  border:1px solid rgba(245, 222, 179, 0.192);
+  border-radius: 4px;
+}
+#navbar a:hover{
+   box-shadow:0 0 5px cyan,
+  0 0 25px cyan,0 0 50px cyan,
+  0 0 100px cyan, 0 0 200px cyan
+}
+a:hover{
+  height:50px;
+  width: 35px;
+  border-radius: 5px;
+  background-color: rgba(177, 12, 202, 0.314);
+}
+#home{
+  position: absolute;
+  height:100vh;
+  top: 260px;
+  padding-left: -30px;
+}
+h2{
+  font-size: 40px;
+}
+h3{
+  font-size:35px
+}
+h1{
+  font-size:50px ;
+}
+h4{
+  font-size: 30px;
+}
+p{
+  font-size: 21px;
+}
+.dp{
+  background-color: rgb(42, 246, 209);
+  box-shadow: 0 0 32px 8px #38bdf8cc, 0 2px 8px #1e293b88;
+  padding: 5px;
+  position:absolute;
+  left: 100px;
+  top: 150px;
+  background-image:url("https://blogger.googleusercontent.com/img/a/AVvXsEjgZ__Hfg_K4NViuoFc_jrFPMRX4wu1iuDe5nI2iIGcLAs7ohQOHprWqYXtumN0SIip9bf-68vLqWa5Qi_s-wRGwAgCfD_lSQjujqUgcw7FEQQhzx9vAyWvLnLQAYvEx3fgsOicdCg_lVZolfrA4EexSqrE7xEFsM_l9ntikCMzJ3N-v2S-_r9Z71oqwcHW");
+  background-size:cover;
+   /* border: 6px double #1e293b; */
+  box-shadow: 0 0 32px 8px #38bdf8cc, 0 2px 8px #1e293b88;
+  transition: box-shadow 0.4s, transform 0.4s, border 0.4s;
+  animation: dp-glow 2s infinite alternate;
+  perspective: 800px;
+  /* box-shadow: 0 16px 48px 16px #38bdf8cc, 0 8px 24px #1e293b88;
+  border-color: #38bdf8; */
+  filter: brightness(1.08) drop-shadow(0 0 16px #38bdf8cc);
+} 
+
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#download{
+padding-top: 700px;
+padding-left: 220px;
+}
+button{
+  background-color: #72cff4;
+  box-sizing: border-box;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+button:hover{
+  box-shadow:0 0 5px cyan,
+  0 0 25px cyan,0 0 50px cyan,
+  0 0 100px cyan, 0 0 200px cyan
+}
+h6{
+  font-size: 20px;
+}
+h5{
+  font-size: 25px;
+}
+#hexagon {
+  position:sticky;
+  width: 450px; /* Adjust as needed */
+  height: calc(550px * 0.866); /* Aspect ratio for a regular hexagon */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  /* border: 6px solid #1e293b;
+  box-shadow: 0 8px 32px rgba(30, 41, 59, 0.867), 0 2px 8px rgba(56, 191, 248, 0.993); */
+}
+/* .honeycomb-hexagon {
+    width: 105px;
+    height: 120.47px;
+    background-color: #f0f0f0;
+    box-shadow: 5px 5px 10px rgba(7, 93, 242, 0.3);
+    border: 4px solid darkblue;
+} */
+.maincontent{
+  display:flex;
+  min-height:100vh;
+}
+.left,.right{
+  flex:50%;
+}
+.about{
+  padding-top:190px;
+  height: 65vh;
+}
+.about h1{
+  text-align: center;
+}
+#portfolio{
+  padding-top:290px;
+}
+#portfolio h1{
+  text-align: center;
+}
+#portfolio a{
+  text-decoration: none;
+  font-size: 20px;
+  margin-right:120px;
+  color: #020e2b;
+}
+.project{
+  background-color: rgb(117, 189, 233);
+  padding:2em;
+  border: 2px solid #ccc;
+  box-shadow: 0 0 15px 5px rgb(0, 72, 255);
+  border-radius: 10px;
+  display:flex;
+  align-items:center;
+  font-size:1.5em;
+  font-weight:bold;
+  text-transform:capitalize;
+}
+#project_grid{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap:1em;
+  padding: 1em;
+  height:60vh;
+}
+.text{
+  color: rgb(57, 3, 127);
+}
+#hexagon,#download{
+  position:fixed;
+}
+.home-sci{
+        padding-top:630px;
+    }
+
+    .home-sci a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border: 2px solid #0ef;
+      border-radius: 50%;
+      font-size: 20px;
+      color: #0ef;
+      text-decoration: none;
+      margin: 30px 10px 30px 0;
+      position:relative;
+      z-index: 7;
+    }
+    .home-sci a:hover{
+      background:#0ef;
+      color:#081b29;
+      box-shadow:0 0 20px #0ef;
+    }
+    #portfolio a:hover{
+      background:#0ef;
+      color:#081b29;
+      box-shadow:0 0 20px #0ef;
+    }
+.achievement_grid,
+.project_grid,
+.skill_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+  border: none;
+  margin: 40px auto;
+  max-width: 600px;
+  padding: 0 16px;
+}
+.achievement_card,
+.project_card,
+.skill_card {
+  background: linear-gradient(135deg, #f8fafc9c 80%, #3845f8cd 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(56, 189, 248, 0.15), 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  padding: 32px 24px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement_card:hover,
+.project_card:hover,
+.skill_card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px #38bdf8cc, 0 2px 16px rgba(0, 0, 0, 0.12);
+}
+
+
+.achievement_card h3,
+.project_card h3,
+.skill_card h3 {
+  margin-bottom: 12px;
+  color: #000103;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.achievement_card p,
+.project_card p,
+.skill_card p {
+  color: #000101fd;
+  font-size: 1.3rem;
+  margin-bottom: 0;
+}
+#list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #c329cb 60%, #9f10d3 100%);
+  border: 3px solid #1e293b;
+  border-radius: 18px;
+  width: 100%;
+  height: 50px;
+  margin: 32px auto;
+  box-shadow: 0 4px 24px #38bdf8cc;
+   overflow: hidden; 
+}
+
+#list ul {
+  display: flex;
+  gap: 12px;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#list ul li {
+  font-size: 1.3rem;
+  width: auto;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-right: 5%;
+  margin-left: 5%;
+  text-shadow: 0 0 8px #1e293b88;
+  transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+}
+
+#list ul li:hover {
+  color: #1e293b;
+  text-shadow: 0 0 8px #38bdf8cc;
+  transform: scale(1);
+}
+#Contact {
+  padding: 48px 32px;
+  margin: 40px auto;
+  max-width: 500px;
+  background: rgba(18, 24, 48, 0.65);
+  border: 2.5px solid #38bdf8;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px #38bdf8cc, 0 2px 16px rgba(0,0,0,0.32);
+  color: #f1f5f9;
+  text-align: center;
+}
+#Contact h2 {
+  color: #38bdf8;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  text-shadow: 0 0 12px #38bdf888;
+}
+
+#Contact p {
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+  color: #f1f5f9;
+}
+
+#Contact form {
+  bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+}
+
+#Contact label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #f1f5f9;
+  text-align: left;
+}
+
+#Contact input,
+#Contact textarea {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1.5px solid #38bdf8;
+  background: #0f172a;
+  color: #f1f5f9;
+  font-size: 1rem;
+  resize: vertical;
+  box-shadow: 0 0 8px #38bdf844;
+}
+
+#Contact button {
+  display: block;
+  width: 20%;
+  margin: 24px auto 0;
+  background: linear-gradient(90deg, #38bdf8 60%, #1e293b 100%);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 0;
+  font-size: 0.9rem;
+  box-shadow: 0 0 16px #38bdf8cc;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+#Contact button:hover {
+  background: linear-gradient(90deg, #1e293b 0%, #38bdf8 100%);
+  box-shadow: 0 0 8px #38bdf8cc;
+}
+
+
+@media (max-width: 600px) {
+  #Contact {
+    padding: 24px 8px;
+    border-radius: 12px;
+  }
+  #portfolio {
+    padding: 24px 8px !important;
+    border-radius: 12px;
+  }
+  #portfolio h1 {
+    font-size: 1.5rem !important;
+    margin-bottom: 12px !important;
+  }
+  .dp {
+    width: 180px !important;
+    height: 180px !important;
+    left: 50%;
+    top: 24px;
+    transform: translateX(-50%);
+    border-width: 4px !important;
+  }
+  #hexagon {
+    width: 180px !important;
+    height: 156px !important;
+    border-width: 4px !important;
+    z-index: 10000;
+  }
+  .project_grid, .achievement_grid, .skill_grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    max-width: 100vw !important;
+    padding: 0 !important;
+  }
+  .project_card, .achievement_card, .skill_card {
+    font-size: 1rem !important;
+    padding: 16px 8px !important;
+  }
+  label, input, textarea, button {
+    font-size: 1rem !important;
+  }
+  body {
+    font-size: 1rem !important;
+    padding: 0 !important;
+  }
+  nav, header, footer {
+    padding: 8px !important;
+    font-size: 1rem !important;
+  }
+}
+@media (max-width: 900px) {
+  #portfolio {
+    padding: 32px 12px !important;
+  }
+  .dp {
+    width: 250px !important;
+    height: 250px !important;
+    left: 50%;
+    top: 32px;
+    transform: translateX(-50%);
+  }
+  #hexagon {
+    width: 250px !important;
+    height: 216px !important;
+  }
+  .project_grid, .achievement_grid, .skill_grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+    gap: 20px !important;
+    max-width: 100vw !important;
+    padding: 0 !important;
+  }
+  .project_card, .achievement_card, .skill_card {
+    font-size: 1.1rem !important;
+    padding: 20px 10px !important;
+  }
+  #Contact {
+    padding: 32px 12px !important;
+  }
+}
+.bar {
+  width: 100%;
+  background: #1e293b;
+  border-radius: 20px;
+  height: 16px;
+  margin: 8px 0;
+  box-shadow: 0 2px 8px #38bdf8cc;
+  position: relative;
+}
+.inner-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: inherit;
+  background: linear-gradient(90deg, #38bdf8 60%, #a259c6 100%);
+  border-radius: 20px;
+  transition: width 0.6s cubic-bezier(.68,-0.55,.27,1.55);
+  box-shadow: 0 0 16px #38bdf8cc, 0 0 12px #a259c688 inset;
+  opacity: 1;
+  position: absolute;
+  z-index: 1;
+}
+.skill_card .inner-bar {
+  border: 2px solid #38bdf8;
+}
+</style>
+</head>
+<body>
+     <header>
+    <nav>
+      <div id="navbar">
+       <div id="logo">Portfolio</div>
+       <div>
+          <a id="tags" href="#introduction">Home</a>
+          <a id="tags" href="#details">About</a>
+          <a id="tags" href="#highlights">Showcase</a>
+          <a id="tags" href="#Contact">Contact</a>
+       </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+  <section class="maincontent">
+  <div class="left" class="inner sticky">
+  <div class="dp honeycomb-hexagon " id="hexagon"></div>
+   <div id="download">
+    <a href="mailto:your-email@example.com" target="_blank" style="position: relative; bottom: 45px;z-index: 7;"><button><h6>HIRE ME</h6></button></a>
+    <a href="https://crimson-hallie-65.tiiny.site" target="_blank" style="position: relative; bottom: 45px;z-index: 7;  "><button><h6>DOWNLOAD CV</h6></button></a>
+    </div> 
+    </div>
+<div class="right" class="inner">
+  <section id="introduction">
+  <div id="home">
+    <h2><span>WELCOME TO MY PORTFOLIO</span></h2><br><h3><span>Hello, It's Me</span></h3><br><h1><span><b>Avirupa Ghosh</b></span></h1><br><h4>And I'm a <span class="text"></span></h4>
+    <pre>
+   
+    </pre>
+           <p>With a keen eye for design and a love for problem-solving.I specialize in crafting responsive, efficient, and scalable web applications that drive results.Take a look around to see my projects,and let's connect if you'd like to discuss how I can help with your next project.</p>
+  </div>
+  <div class="home-sci">
+  <a href="https://www.linkedin.com/in/avirupa-ghosh-261110308/" target="_blank"><i class='bx bxl-linkedin' style="z-index: 6;"></i></a>
+  <a href="https://www.instagram.com/avirupa_ghosh_05" target="_blank"><i class='bx bxl-instagram' style="z-index: 6;"></i></a>
+  <a href="https://x.com/Avirupa_Ghosh" target="_blank"><i class='bx bxl-twitter' style="z-index: 6;"></i></a>
+  <a href="https://github.com/Avirupa143s" target="_blank"><i class='bx bxl-github' style="z-index: 6;"></i></a>
+</div>
+</section>
+<section id="details"></section>
+ <div class="about">
+  <section id="details">
+    <h1 style="color:rgb(0, 0, 0);text-shadow:0px 0px 5px rgb(72, 15, 228);letter-spacing: 4px;"><b>ABOUT ME</b></h1>
+    <pre>
+
+    </pre>
+    <p>Hi, I'm Avirupa Ghosh, a passionate and detail-oriented web developer with a strong foundation in crafting visually appealing and user-friendly digital experiences. With 6 months of experience in web development, I've honed my skills in creating responsive, efficient, and scalable web applications that drive results.
+</p>
+<pre>
+
+</pre>
+<p>I'm driven by a passion for innovation, a desire to stay up-to-date with the latest web development trends, and a commitment to delivering high-quality solutions that exceed expectations. I believe in writing clean, readable code that's maintainable, efficient, and scalable.
+</p>
+<pre>
+
+</pre>
+<p>If you're looking for a dedicated and skilled web developer to help bring your project to life, let's connect! I'd love to discuss how my skills and experience can help drive your project's success.
+</p>
+  </section>
+  </div>
+
+<section id="highlights" style="padding: 48px 32px;height: min(500px) max(800px)">
+   <div id="portfolio">
+  <h1 style="color:rgb(0, 0, 0);text-shadow:0px 0px 5px rgb(72, 15, 228);letter-spacing: 4px;"><b>PORTFOLIO SHOWCASE</b></h1>
+  <h6 style="color: rgb(7, 1, 24);position: relative;left: 30%;">Choose a category to explore:</h6>
+  <div id="list"> 
+    <ul>
+      <li class="Project">PROJECTS</li>
+      <li class="Achievement">ACHIEVEMENTS</li>
+      <li class="Skill">SKILLS</li>
+    </ul>
+  </div>
+  <div class="project_grid">
+                <div class="project_card"><h3>Project.1</h3></div>
+                <div class="project_card"><h3>Project.2</h3></div>
+                <div class="project_card"><h3>Project.3</h3></div>
+                <div class="project_card"><h3>Project.4</h3></div>
+                <div class="project_card"><h3>Project.5</h3></div>
+                <div class="project_card"><h3>Project.6</h3></div>
+                <div class="project_card"><h3>Project.7</h3></div>
+                <div class="project_card"><h3>Project.8</h3></div>
+                <div class="project_card"><h3>Project.9</h3></div>
+            </div>
+   <div class="achievement_grid">
+             <!-- <h2>Achievements</h2> -->
+             <div class="achievement_card">
+                 <div class="image1"></div>
+                 <h3>Achievement.1</h3>
+             </div>
+             <div class="achievement_card">
+                 <div class="image2"></div>
+                 <h3>Achievement.2</h3>
+             </div>
+             <div class="achievement_card">
+                 <div class="image3"></div>
+                 <h3>Achievement.3</h3>
+             </div>
+             <div class="achievement_card">
+                 <div class="image4"></div>
+                 <h3>Achievement.4</h3>
+             </div>
+            </div>
+   <div class="skill_grid">
+                <div class="skill_card">
+                    <h3>HTML</h3>
+                    <div class="Picture"><img src="https://cdn.simpleicons.org/html5/ff5722" alt="" style="height:32px;"></div>
+                    <div class="bar">
+                        <div class="inner-bar" style="width: 75%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="skill_card">
+                    <h3>CSS</h3>
+                    <div class="Picture"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS Icon" style="height:32px;"></div>
+                    <div class="bar">
+                        <div class="inner-bar" style="width: 80%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="skill_card">
+                    <h3>JavaScript</h3>
+                    <div class="Picture"><img src="https://cdn.simpleicons.org/javascript/f7df1e" alt="" style="height:32px;"></div>
+                    <div class="bar">
+                        <div class="inner-bar" style="width: 65%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="skill_card">
+                    <h3>SQL</h3>
+                    <div class="Picture"><img src="https://cdn.simpleicons.org/mysql/4479b2" alt="" style="height:32px;"></div>
+                    <div class="bar">
+                        <div class="inner-bar" style="width: 90%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="skill_card">
+                    <h3>Java</h3>
+                    <div class="Picture"><img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java Icon" style="height:32px;"></div>
+                    <div class="bar">
+                        <div class="inner-bar" style="width: 75%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="skill_card">
+                    <h3>Python</h3>
+                    <div class="Picture"><img src="https://cdn.simpleicons.org/python/3776ab" alt="" style="height:32px;"></div>
+                    <div class="bar">
+                        <div class="inner-bar" style="width: 70%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="skill_card">
+                    <h3>C</h3>
+                    <div class="Picture"><img src="https://cdn.simpleicons.org/c/00599c" alt="" style="height:32px;"></div>
+                    <div class="bar">
+                        <div class="inner-bar" style="width: 95%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+  </div> 
+</section>
+<section id="Contact" >
+           <div class="contact_info">
+              <h2>Get in Touch</h2>
+              <p>If you have any questions or would like to discuss potential projects, feel free to reach out!</p>
+              <h2>Contact Form</h2>
+                <form action="https://formspree.io/f/xldlqwap" target="_blank" method ="POST" class="contact-form" data-form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            </div>
+        </section>
+</main>
+ <footer>
+        <div class="footer-content">
+            <hr>
+            <p style="justify-content: center; align-items: center;">&copy; 2025 Avirupa Ghosh. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  var typed = new Typed(".text", {
+    strings: ["Frontend Developer", "Data Scientist", "Web Developer"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
+  });
+window.addEventListener('DOMContentLoaded', function() {
+  const showcase = document.querySelector('#highlights');
+  const skillGrid = document.querySelector('.skill_grid');
+  const achievementGrid = document.querySelector('.achievement_grid');
+  const projectGrid = document.querySelector('.project_grid');
+  const skillBtn = document.querySelector('.Skill');
+  const achievementBtn = document.querySelector('.Achievement');
+  const projectBtn = document.querySelector('.Project');
+
+  function hideAll() {
+    if (skillGrid) skillGrid.style.display = 'none';
+    if (achievementGrid) achievementGrid.style.display = 'none';
+    if (projectGrid) projectGrid.style.display = 'none';
+  }
+
+  function showOnly(grid) {
+    hideAll();
+    if (grid) grid.style.display = 'grid';
+  }
+
+  hideAll();
+
+  skillBtn.addEventListener('click', function() {
+    showOnly(skillGrid);
+    skillBtn.style.color = 'black';
+    achievementBtn.style.color = 'wheat';
+    projectBtn.style.color = 'wheat';
+  });
+  achievementBtn.addEventListener('click', function() {
+    showOnly(achievementGrid);
+    achievementBtn.style.color = 'black';
+    skillBtn.style.color = 'wheat';
+    projectBtn.style.color = 'wheat';
+  });
+  projectBtn.addEventListener('click', function() {
+    showOnly(projectGrid);
+    projectBtn.style.color= 'black';
+    skillBtn.style.color = 'wheat';
+    achievementBtn.style.color = 'wheat';
+  });
+});
+ScrollReveal({
+  reset: true,
+  distance: '80px',
+  duration: 2000,
+  delay: 200 
+});
+
+ScrollReveal().reveal('#home, #details h1', { origin: 'top' });
+ScrollReveal().reveal('#portfolio h1', { origin: 'top' });
+ScrollReveal().reveal('#download', { origin: 'bottom' });
+ScrollReveal().reveal('#home p,.home-sci,#details p', { origin: 'right'});
+ScrollReveal().reveal('#hexagon', { origin: 'left'});
+ScrollReveal().reveal('#Contact', {
+  origin: 'bottom',
+  delay: 500,
+  viewFactor: 0.3
+});
+
+</script>
+</body>
+</html>
